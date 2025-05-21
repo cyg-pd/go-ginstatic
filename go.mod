@@ -1,6 +1,6 @@
 module github.com/cyg-pd/go-gin-static
 
-go 1.18
+go 1.22
 
 require github.com/gin-gonic/gin v1.10.1
 
