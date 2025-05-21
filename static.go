@@ -73,7 +73,6 @@ func (s *Static) handler(ctx *gin.Context) {
 	}
 
 	s.serveIndex(ctx)
-	ctx.Abort()
 }
 
 func (s *Static) writeCustomHeader(ctx *gin.Context) {
@@ -93,6 +92,7 @@ func (s *Static) serveIndex(ctx *gin.Context) {
 
 	if s.templateValuesFunc == nil {
 		ctx.Writer.Write(s.indexContent)
+		ctx.Abort()
 		return
 	}
 
@@ -100,6 +100,7 @@ func (s *Static) serveIndex(ctx *gin.Context) {
 	if err := s.tmpl.Execute(ctx.Writer, s.templateValuesFunc(ctx.Request)); err != nil {
 		panic(err)
 	}
+	ctx.Abort()
 }
 
 func (s *Static) serveFile(ctx *gin.Context, upath string) {
@@ -110,6 +111,7 @@ func (s *Static) serveFile(ctx *gin.Context, upath string) {
 
 	s.writeCustomHeader(ctx)
 	http.ServeFileFS(ctx.Writer, ctx.Request, s.fs, upath)
+	ctx.Abort()
 }
 
 func New(fs fs.FS, opts ...option) *Static {
