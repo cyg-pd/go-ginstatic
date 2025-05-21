@@ -1,18 +1,18 @@
-# go-gin-static
+# go-ginstatic
 
-[![tag](https://img.shields.io/github/tag/cyg-pd/go-gin-static.svg)](https://github.com/cyg-pd/go-gin-static/releases)
+[![tag](https://img.shields.io/github/tag/cyg-pd/go-ginstatic.svg)](https://github.com/cyg-pd/go-ginstatic/releases)
 ![Go Version](https://img.shields.io/badge/Go-%3E%3D%201.18-%23007d9c)
-[![GoDoc](https://godoc.org/github.com/cyg-pd/go-gin-static?status.svg)](https://pkg.go.dev/github.com/cyg-pd/go-gin-static)
-![Build Status](https://github.com/cyg-pd/go-gin-static/actions/workflows/test.yml/badge.svg)
-[![Go report](https://goreportcard.com/badge/github.com/cyg-pd/go-gin-static)](https://goreportcard.com/report/github.com/cyg-pd/go-gin-static)
-[![Coverage](https://img.shields.io/codecov/c/github/cyg-pd/go-gin-static)](https://codecov.io/gh/cyg-pd/go-gin-static)
-[![Contributors](https://img.shields.io/github/contributors/cyg-pd/go-gin-static)](https://github.com/cyg-pd/go-gin-static/graphs/contributors)
-[![License](https://img.shields.io/github/license/cyg-pd/go-gin-static)](./LICENSE)
+[![GoDoc](https://godoc.org/github.com/cyg-pd/go-ginstatic?status.svg)](https://pkg.go.dev/github.com/cyg-pd/go-ginstatic)
+![Build Status](https://github.com/cyg-pd/go-ginstatic/actions/workflows/test.yml/badge.svg)
+[![Go report](https://goreportcard.com/badge/github.com/cyg-pd/go-ginstatic)](https://goreportcard.com/report/github.com/cyg-pd/go-ginstatic)
+[![Coverage](https://img.shields.io/codecov/c/github/cyg-pd/go-ginstatic)](https://codecov.io/gh/cyg-pd/go-ginstatic)
+[![Contributors](https://img.shields.io/github/contributors/cyg-pd/go-ginstatic)](https://github.com/cyg-pd/go-ginstatic/graphs/contributors)
+[![License](https://img.shields.io/github/license/cyg-pd/go-ginstatic)](./LICENSE)
 
 ## 🚀 Install
 
 ```sh
-go get github.com/cyg-pd/go-gin-static@v1
+go get github.com/cyg-pd/go-ginstatic@v1
 ```
 
 This library is v1 and follows SemVer strictly.
@@ -23,7 +23,7 @@ This library has no dependencies outside the Go standard library.
 
 ## 💡 Usage
 
-You can import `go-gin-static` using:
+You can import `go-ginstatic` using:
 
 ```go
 import (
@@ -31,7 +31,7 @@ import (
 	"log/slog"
 	"net/http"
 
-	"github.com/cyg-pd/go-gin-static"
+	"github.com/cyg-pd/go-ginstatic"
 	"github.com/gin-gonic/gin"
 )
 

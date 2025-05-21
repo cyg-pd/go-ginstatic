@@ -1,4 +1,4 @@
-module github.com/cyg-pd/go-gin-static
+module github.com/cyg-pd/go-ginstatic
 
 go 1.22
 
