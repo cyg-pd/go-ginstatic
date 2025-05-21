@@ -5,6 +5,7 @@ import (
 	"io/fs"
 	"net/http"
 	"path"
+	"path/filepath"
 	"strings"
 	"text/template"
 
@@ -63,9 +64,15 @@ func (s *Static) handler(ctx *gin.Context) {
 	upath := s.filePathFunc(ctx)
 	if _, err := s.fs.Open(upath); err == nil {
 		s.serveFile(ctx, upath)
-	} else {
-		s.serveIndex(ctx)
+		return
 	}
+
+	if filepath.Ext(upath) != "" {
+		ctx.AbortWithStatus(http.StatusNotFound)
+		return
+	}
+
+	s.serveIndex(ctx)
 	ctx.Abort()
 }
 
