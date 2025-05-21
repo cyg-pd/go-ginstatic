@@ -62,12 +62,12 @@ func (s *Static) handler(ctx *gin.Context) {
 	}
 
 	upath := s.filePathFunc(ctx)
-	if _, err := s.fs.Open(upath); err == nil {
+	if _, err := s.fs.Open(upath); err == nil && upath != "index.html" {
 		s.serveFile(ctx, upath)
 		return
 	}
 
-	if filepath.Ext(upath) != "" {
+	if filepath.Ext(upath) != "" && upath != "index.html" {
 		ctx.AbortWithStatus(http.StatusNotFound)
 		return
 	}
